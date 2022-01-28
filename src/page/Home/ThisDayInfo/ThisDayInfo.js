@@ -1,13 +1,19 @@
 import React from "react";
-import s from './ThisDayInfo.module.css'
-import {ThisDayItem} from "./ThisDayItem";
-
+import s from './ThisDayInfo.module.scss'
+import {ThisDayItems} from "./ThisDayItems";
+import cloud from "./../../../assets/imeges/cloud.png"
 
 export const ThisDayInfo = (props) =>{
-    let get_info = props.state.map(i => <ThisDayItem id={i.icon_id}
-                                                     name={i.name}
-                                                     value={i.value}/>)
-    return(<div className={s.style}>
+    const get_items = props.state.map(p => <ThisDayItems
+        id={p.icon_id}
+        name={p.name}
+        value={p.value}/>)
+    return(
+        <div className={s.this__day_info}>
+            <div className={s.this__day_info_items}>
+                {get_items}
+            <img className={s.cloud__img} src={cloud}/>
+            </div>
 
     </div>)
 }
