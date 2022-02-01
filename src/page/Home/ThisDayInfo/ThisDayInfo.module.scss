@@ -3,7 +3,7 @@
     position: relative;
     align-items: center;
     width: 750px;
-    background: $light-background;
+    background: var(#{--components-background-default});
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     height: 300px;
@@ -49,6 +49,6 @@
 }
 .this__day_value{
     font-size: 14px;
-    color: $light-color;
+    color: var(#{--text-color-default});
 
 }

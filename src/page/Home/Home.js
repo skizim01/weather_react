@@ -9,7 +9,7 @@ import {Popup} from "../Popup/Popup";
 
 export const Home = (props) => {
     return (<div >
-        <Popup state={props.state}/>
+        {/*<Popup state={props.state}/>*/}
         <div className={s.style}>
         <ThisDay/>
         <ThisDayInfo state={props.state}/>
