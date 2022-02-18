@@ -4,9 +4,10 @@
     padding: 20px;
     max-width: 400px;
     width: 100%;
-    background: $light-background;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
+    background: var(#{--components-background-default});
+
 }
 
 .top__block {

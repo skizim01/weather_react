@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     width: 750px;
-    background: $light-background;
+    background: var(#{--components-background-default});
     box-shadow: $box-shadow;
     border-radius: $border-radius;
     height: 300px;
@@ -37,7 +37,7 @@
     }
     .this__day_name {
         font-size: 22px;
-        color: $light-color;
+        color: var(#{--text-color-default});
     }
 }
 
@@ -46,5 +46,28 @@
     .this__city {
         color: $base-color;
         font-size: 15px;
+    }
+}
+
+.blour{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background: rgb(0,0,0,0.25);
+}
+
+.close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    svg{
+        transition: 10s;
+    }
+    &:hover{
+        svg{
+            transform: rotate(5885deg) ;
+        }
     }
 }

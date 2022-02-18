@@ -11,34 +11,38 @@ export const Popup = (props) => {
         name={p.name}
         value={p.value}/>)
     return (
+        <div className={s.blour}>
 
-
-        <div className={s.this__day_info}>
-            <div className={s.left}>
-                <div className={s.this__day}>
-                    <div className={s.top__block}>
-                        <div className={s.top__block_wrapper}>
-                            <div className={s.this__temp}>20°</div>
-                            <div className={s.this__day_name}>Сегодня</div>
+            <div className={s.this__day_info}>
+                <div className={s.left}>
+                    <div className={s.this__day}>
+                        <div className={s.top__block}>
+                            <div className={s.top__block_wrapper}>
+                                <div className={s.this__temp}>20°</div>
+                                <div className={s.this__day_name}>Сегодня</div>
+                            </div>
+                            <GlobalSVGSelector id="sun"/>
                         </div>
-                        <GlobalSVGSelector id="sun" />
-                    </div>
-                    <div className={s.bottom__block}>
-                        <div className={s.this__time}>
-                            Час: <span>21:54</span>
-                        </div>
-                        <div className={s.this__city}>
-                            Місто: <span>Вінниця</span>
+                        <div className={s.bottom__block}>
+                            <div className={s.this__time}>
+                                Час: <span>21:54</span>
+                            </div>
+                            <div className={s.this__city}>
+                                Місто: <span>Вінниця</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={s.right}>
-            <div className={s.this__day_info_items}>
-                {get_items}
-            </div>
+                <div className={s.right}>
+                    <div className={s.this__day_info_items}>
+                        {get_items}
+                    </div>
 
-        </div>
+                </div>
+                <div className={s.close}>
+                    <GlobalSVGSelector id='close'/>
+                </div>
+            </div>
         </div>)
 
 }

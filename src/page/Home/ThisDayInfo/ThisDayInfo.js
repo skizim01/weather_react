@@ -4,7 +4,8 @@ import {ThisDayItems} from "./ThisDayItems";
 import cloud from "./../../../assets/imeges/cloud.png"
 
 export const ThisDayInfo = (props) =>{
-    const get_items = props.state.map(p => <ThisDayItems
+    console.log(props.state)
+    const get_items = props.items.map(p => <ThisDayItems
         id={p.icon_id}
         name={p.name}
         value={p.value}/>)
